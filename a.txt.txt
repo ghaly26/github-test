@@ -1,1 +1,8 @@
-jfjjkjfjjfsjfsjfsjfjfjfsjfsjfsjjfsjs
+
+git init 
+git status 
+git add 
+git commit -m ""
+git log -v 
+git checkout "commit hash"
+git master 
