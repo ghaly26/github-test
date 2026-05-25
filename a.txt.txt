@@ -5,4 +5,5 @@ git add
 git commit -m ""
 git log -v 
 git checkout "commit hash"
-git master 
+git checkout master 
+git push --all origin
