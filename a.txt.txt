@@ -9,3 +9,6 @@ git push --all origin
 git remote add orgin https://github.com/ghaly26/github-test
 git branch -M main
 git push -u orgin main
+git fetch #fetch with remote repo
+git status #check with the remote
+git pull 
