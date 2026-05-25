@@ -7,3 +7,6 @@ git log -v
 git checkout "commit hash"
 git checkout master 
 git push --all origin
+git remote add orgin https://github.com/ghaly26/github-test
+git branch -M main
+git push -u orgin main
