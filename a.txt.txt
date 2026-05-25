@@ -12,3 +12,4 @@ git push -u orgin main
 git fetch #fetch with remote repo
 git status #check with the remote
 git pull 
+git clone 
