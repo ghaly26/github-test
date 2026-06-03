@@ -1,4 +1,5 @@
-# if condition
+# Python Notes
+#========================================================#
 chair_number= int(input("Enter chair number: \n"))
 # if chair number !=13:
 #  print ("You win" )        
