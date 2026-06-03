@@ -29,3 +29,17 @@ else:
     print(f"{area} is not on our list!")
 
 #========================================================#
+# if condition with and or
+#========================================================# 
+
+name= input ("Please enter your name: \n")
+password=input("Please enter your password: \n")
+
+if name.lower() =="ibrahim" and password == "hiThere":
+    print("Welcome back!")
+else:
+    print("Sorry, wrong name or password.")
+
+#========================================================#
+# if condition with nested if
+#========================================================#
