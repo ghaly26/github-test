@@ -312,5 +312,35 @@ else:
       print(f"You lose! {computer_choice} beats {user_choice}.")
 
 #========================================================#
-# unit-06 nest list
+# unit-06 loops 
 #========================================================#  
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for x in numbers:
+    if x % 2 == 0:
+        print(f"\n{x}")
+print("\nFinished the loop successfully")
+
+#========================================================#
+attendees_input = input("Enter the number of attendees separated by commas: ")
+attendees = attendees_input.split(",")
+
+for person in attendees:
+    print("\n" + person + "\n")
+    response = input( "Is this person attending? (Yes/No): ")
+    if response.lower() == "yes":
+        print( "Attendance confirmed" )
+    else:
+        print( "Attendance not confirmed")
+print("======")
+#========================================================#
+travel_list=input( "Please type the names of the countries separated by commas: ").split(",")
+
+for country in travel_list:
+    print( f" {country} " )
+    visited=input( f"Have you ever visited {country} before? (yes/no): " )
+    if visited == "yes":
+        print(f"Hope you had a wonderful time in {country}!")
+    else:
+        print(f"Hope you get to visit {country} soon!")
+    print("=======")  # Print a blank line for better readability
+input("Press enter to exit...." )

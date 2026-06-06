@@ -1,0 +1,11 @@
+travel_list=input( "Please type the names of the countries separated by commas: ").split(",")
+
+for country in travel_list:
+    print( f" {country} " )
+    visited=input( f"Have you ever visited {country} before? (yes/no): " )
+    if visited == "yes":
+        print(f"Hope you had a wonderful time in {country}!")
+    else:
+        print(f"Hope you get to visit {country} soon!")
+    print("=======")  # Print a blank line for better readability
+input("Press enter to exit...." )
