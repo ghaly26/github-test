@@ -312,5 +312,5 @@ else:
       print(f"You lose! {computer_choice} beats {user_choice}.")
 
 #========================================================#
-# unit-06 code project
+# unit-06 nest list
 #========================================================#  
