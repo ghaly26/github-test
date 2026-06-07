@@ -312,8 +312,9 @@ else:
       print(f"You lose! {computer_choice} beats {user_choice}.")
 
 #========================================================#
-# unit-06 loops 
+# unit-06  
 #========================================================#  
+#loops
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for x in numbers:
     if x % 2 == 0:
@@ -333,6 +334,7 @@ for person in attendees:
         print( "Attendance not confirmed")
 print("======")
 #========================================================#
+#python test script to ask user about their travel experiences
 travel_list=input( "Please type the names of the countries separated by commas: ").split(",")
 
 for country in travel_list:
@@ -344,3 +346,263 @@ for country in travel_list:
         print(f"Hope you get to visit {country} soon!")
     print("=======")  # Print a blank line for better readability
 input("Press enter to exit...." )
+#========================================================#
+# to do list
+tasks_list=input("Enter your today tasks separated by commas: \n").split(",")
+done_tasks=[]
+ongoing_tasks=[]
+
+for task in tasks_list:
+    print(f"\n{task}\n")
+
+    done=input(f"Have you completed '{task.strip()}'? (yes/no): \n")
+    if done.lower() == "yes":
+        print(f"Great job on completing '{task}'")
+        done_tasks.append(task)
+    else:
+        print(f"Keep working on '{task}'! You can do it!")
+        ongoing_tasks.append(task)
+    print("=======")  # Print a blank line for better readability
+
+see_progress=input("Do you want to see your progress? (yes/no): \n")
+if see_progress.lower() == "no":
+        print("No problem! press enter to exit....")
+else:
+        print("\nHere is your progress:")
+        print("""
+                 ****Done Tasks***
+              """)
+        print(done_tasks)
+        print("""                 
+                ***Ongoing Tasks***
+                """)
+        print(ongoing_tasks)
+        input("Press enter to exit....")
+#========================================================#
+print("*** Welcome to the multiplication table ***")
+user_input = int(input("Enter a number: "))
+print(f"Multiplication table for {user_input}:")
+for i in range(1, 11):
+    result = user_input * i
+    print(f"{user_input} x {i} = {result}")
+
+#========================================================#
+items = []
+prices = []
+print("\n*****Welcome to iShop calculator*****\n")    
+no_of_items = int( input( "How many items are there in your basket today? " ))
+if no_of_items > 0:
+    print( "\nLet's get to counting them ." )
+    for i in range(0, no_of_items):
+        name = input(f"Tell me the name of the item number {i+1}: ")
+        price = float(input(f"What is the price of {name}\n$ "))
+        items.append( name )
+        prices.append( price )
+    choice= input( "Would you like to see your entire basket items? " ).lower( )
+    if choice == "yes":
+        print( "\nHere are the items in your basket:" )
+        print(items)
+        see_price= input("Would you like to see how much it'll cost? "). lower( )
+        if see_price == "yes":
+            print( "\nBuying these items will cost: $" )
+            print( sum( prices ) )
+        else:
+            input( "Press enter to exit" )
+    else:
+        input( "Press enter to exit" )
+else:
+    print( "Seems like you're not in the mood for shopping today" )
+
+#========================================================#
+numbers = [1, 2, 3, 4, 5]
+total = 0
+print ("Let's add each number to the next" )
+for i in numbers:
+    total += i
+    print (f"---> {total}")
+print (f"\nThe total number is:{total} \n")
+#========================================================#
+
+names=input("Enter your first and last names separated by commas: \n").split(", ")
+
+abbreviated_names = []
+for name in names:
+    name_parts = name.split()
+    print( name_parts)
+
+    first_name = name_parts[0]
+    last_name = name_parts[1]
+    first_initial = first_name[0]
+    last_initial = last_name[0]
+    abbreviation = (first_initial + "." + last_initial + ".").upper()
+    abbreviated_names.append(abbreviation)
+
+print(abbreviated_names)
+for name in abbreviated_names:
+    print(name)
+#========================================================#
+#reversing the order of words in a sentence
+sentence = input( "Enter a sentence: " )
+words = sentence.split()
+reversed_words = words[::-1]
+print("reversed sentence:", " ".join(reversed_words) )
+#========================================================#
+#Unit-06 code project
+#=========================================================#
+import random
+import string
+print("welcome to the password generator!")
+length = int(input("Enter the total number of characters for the password: "))
+letters_count = int(input("Enter the number of letters: "))
+digits_count = int(input("Enter the number of digits: "))
+punctuation_count = int(input("Enter the number of punctuation characters: "))
+if letters_count + digits_count + punctuation_count != length:
+    print("The total number of characters does not match the sum of letters, digits, and punctuation.")
+else:
+    password = []
+    letters = string.ascii_letters
+    digits = string.digits
+    punctuation = string.punctuation
+    # password.extend(random.choices(letters, k=letters_count))
+    # password.extend(random.choices(digits, k=digits_count))
+    # password.extend(random.choices(punctuation, k=punctuation_count))
+    # random.shuffle(password)
+    # print("Generated password:", "".join(password))
+
+    password_chars=(random. choices(letters, k=letters_count) +
+                    random. choices(digits, k=digits_count) +
+                    random. choices(punctuation, k=punctuation_count))
+    random.shuffle(password_chars)
+    print("Generated password:", "".join(password))
+#========================================================#
+#Unit-07
+#========================================================#
+# while loop
+import random
+print("Welcome to the Number Guessing Game!")
+secret_number= random.randint(1, 10)
+guess = int( input( "Guess a number between 1 and 10: " ))
+while guess != secret_number:
+    if guess < secret_number:
+        print("Too low! Guess again.")
+        guess = int( input( "Too low! Guess a number between 1 and 10: " ))
+    else:
+        print("Too high! Guess again.")
+        guess = int( input( "Too high! Guess a number between 1 and 10: " ))
+print("Congratulations! You guessed the number!")
+#========================================================#
+# unit-07 project: Hangman Game with while loop
+#========================================================#
+import random
+
+Hangman_Stages = [
+    
+    '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''', 
+'''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', 
+'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''',
+'''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', 
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', 
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', 
+'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''']
+
+
+words = ["good", "bad", "ugly"] 
+random_word = random.choice (words)
+display = ["_"] * len( random_word)
+print (display)
+# another syntax 
+# display = []
+# for letter in random_word:
+#     display.append("_")    
+# print(display)   
+
+lives=6
+
+while "_" in display and lives > 0:
+    guessed=input ("Please guess a letter :").lower()
+
+    
+    if guessed not in random_word:
+       lives -=1
+       print (Hangman_Stages[6-lives])
+    else:
+       for position in range(len(random_word)):
+           if random_word [position]== guessed:
+              display [position] = guessed
+
+    print (' ' .join(display))
+    print (f" You have {lives} more tries")
+
+if lives == 0 :
+      print("""
+            **********
+             You lose!
+            **********
+            """)
+      print(Hangman_Stages[-1])
+
+else:
+    print ( """
+      **********
+       YOU WIN!
+      **********
+           """ )
+
+#========================================================#
+
