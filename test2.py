@@ -128,64 +128,187 @@
 # my_recipe.display_receipe()
 
 #another
-import os
-import time
+# import os
+# import time
 
-def clear_screen():
-    os.system('cls' if os.name  == 'nt' else 'clear')
-class User:
-   def __init__ (self, first_name, last_name, email, password, status='inactive') :
-      self.first_name = first_name
-      self.last_name =last_name
-      self.email = email
-      self.password =password
-      self.status =status
+# def clear_screen():
+#     os.system('cls' if os.name  == 'nt' else 'clear')
+# class User:
+#    def __init__ (self, first_name, last_name, email, password, status='inactive') :
+#       self.first_name = first_name
+#       self.last_name =last_name
+#       self.email = email
+#       self.password =password
+#       self.status =status
 
-   def display_user(self) : 
-        print(f"First name: {self.first_name}")
-        print(f"Last name: {self.last_name}")
-        print(f"Email: {self.email}")
-        print(f"Status: {self.status}")
-        print ("_" *20)
+#    def display_user(self) : 
+#         print(f"First name: {self.first_name}")
+#         print(f"Last name: {self.last_name}")
+#         print(f"Email: {self.email}")
+#         print(f"Status: {self.status}")
+#         print ("_" *20)
 
-def create_user():
-   first_name = input("Enter your first name: ")
-   last_name= input("Enter your last name: ")
-   email = input("Enter your email: ")
-   password = input("Enter your password: ")
+# def create_user():
+#    first_name = input("Enter your first name: ")
+#    last_name= input("Enter your last name: ")
+#    email = input("Enter your email: ")
+#    password = input("Enter your password: ")
 
-   return User(first_name,last_name,email,password )
+#    return User(first_name,last_name,email,password )
 
-new_users=[]
+# new_users=[]
 
-while True:
-    print("\n  welcome to user management \n")
-    print("\n  Choose an action: \n") 
-    print("1. add new user")
-    print("2. Display all users")
-    print("3. Exit \n")
+# while True:
+#     print("\n  welcome to user management \n")
+#     print("\n  Choose an action: \n") 
+#     print("1. add new user")
+#     print("2. Display all users")
+#     print("3. Exit \n")
 
-    choice = input("Enter your choice:")
+#     choice = input("Enter your choice:")
 
-    if choice == '1':
-        new_users.append(create_user())
-        print("User addess successfully!" )
-        time.sleep(2)
+#     if choice == '1':
+#         new_users.append(create_user())
+#         print("User addess successfully!" )
+#         time.sleep(2)
     
-    elif choice=='2':
-        clear_screen()
-        if new_users:
-            print ("Displaying all new users ....")
-            time.sleep (1)
-            for i in new_users:
-                i.display_user()
-            time.sleep(2)
-        else:
-            print("sorry, do not find any user to display!")
-            time.sleep(2)
-    elif choice=='3':
-        print("Exiting ....")
-        break
+#     elif choice=='2':
+#         clear_screen()
+#         if new_users:
+#             print ("Displaying all new users ....")
+#             time.sleep (1)
+#             for i in new_users:
+#                 i.display_user()
+#             time.sleep(2)
+#         else:
+#             print("sorry, do not find any user to display!")
+#             time.sleep(2)
+#     elif choice=='3':
+#         print("Exiting ....")
+#         break
+
+#     else:
+#         print("lnvalid choice! Please try again.")
+
+
+##############
+# #   another
+
+# import os
+# import time
+
+# def clear_screen():
+#     os.system('cls' if os.name  == 'nt' else 'clear')
+# class Member:
+   
+#    def __init__ (self, first_name, last_name, membership_id, membership_status='inactive') :
+#       self.first_name = first_name
+#       self.last_name =last_name
+#       self.membership_id=membership_id
+#       self.membership_status=membership_status
     
-    else:
-        print("lnvalid choice! Please try again.")
+
+#    def display_member(self):
+#         print(f"First name: {self.first_name}")
+#         print(f"Last name: {self.last_name}")
+#         print(f"Membership_id: {self.membership_id}")
+#         print(f"Membership_status: {self.membership_status}")
+#         print ("_" *20)
+
+# def create_member():
+#    first_name = input("Enter your first name: ")
+#    last_name= input("Enter your last name: ")
+#    membership_id=input("Enter your membership_id: ")
+#    membership_status= input("Enter your membership status or press Enter: ")
+#    if not membership_status:
+#        membership_status='inactive'
+
+#    return Member(first_name, last_name, membership_id, membership_status)
+
+# def serach_member(members) :
+#     clear_screen()
+#     print("\nSearch by: \n")
+#     print("1. Membership ID")
+#     print("2. First Name")
+#     print("3. Membership Status\n")
+
+#     search_choice= input("Enter your choice: ")
+
+#     found_members =[]
+
+#     if search_choice == '1':
+#         search_id= input("Enter the membership ID to search: ")
+#         for x in members:
+#             if x.membership_id == search_id:
+#                 found_members.append(x)
+#                 break
+    
+#     elif search_choice == '2':
+#         first_name= input("Enter the first name to search: ")
+#         for x in members:
+#             if x.first_name.lower() == first_name.lower():
+#                 found_members.append(x)
+    
+#     elif search_choice =='3':
+#         membership_status = input ("Etner the membership status to search (active / inactive): ")
+#         for x in members:
+#             if x.membership_status.lower() == membership_status.lower():
+#                 found_members.append(x)
+
+#     else:
+#         print("Sorry,Invalid choice ")
+
+#     if found_members:
+#         clear_screen()
+#         print("Members found: ")
+#         for x in found_members:
+#             x.display_member()
+#     else:
+#         print("member not found!")
+#         time.sleep(2)
+
+# members=[]
+
+# while True:
+#     clear_screen()
+#     print("\n  welcome to Gym membership management \n")
+#     print("\n  Choose an action: \n") 
+#     print("1. add new member")
+#     print("2. Display all members")
+#     print("3. Search for a member")
+#     print("3. Exit \n")
+
+#     choice = input("Enter your choice: ")
+
+#     if choice == '1':
+#         members.append(create_member())
+#         print("members added successfully!" )
+#         time.sleep(2)
+    
+#     elif choice=='2':
+#         clear_screen()
+#         if members:
+#             print ("Displaying all members ....")
+#             time.sleep (5)
+#             for i in members:
+#                 i.display_member()
+#             time.sleep(6)
+#         else:
+#             print("sorry, do not find any members to display!")
+#             time.sleep(2)
+        
+#     elif choice=='3':
+#         if members:
+#             serach_member(members)
+#             time.sleep(5)
+#         else:
+#             print("No Member to search...,")
+#             time.sleep(2)
+
+#     elif choice=='4':
+#         print("Exiting ....")
+#         time.sleep(5)
+
+#     else:
+#         print("lnvalid choice! Please try again.")
+#         time.sleep(5)
