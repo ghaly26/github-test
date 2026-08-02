@@ -192,7 +192,7 @@
 
 
 ##############
-# #   another
+#   another
 
 # import os
 # import time
@@ -312,3 +312,209 @@
 #     else:
 #         print("lnvalid choice! Please try again.")
 #         time.sleep(5)
+
+
+#another 
+# from turtle import Turtle, Screen
+
+# sam=Turtle()
+# sam.shape("turtle")
+# sam.forward (100)
+# sam.left (90)
+# sam.forward(200)
+
+# window = Screen()
+
+# window.exitonclick()
+
+#######
+
+# from turtle import Turtle, Screen
+
+# sam=Turtle()
+# sam.shape("turtle")
+
+# for _ in range(4):
+#     sam.forward(100)
+#     sam.left(110)
+    
+# window = Screen()
+
+# window.exitonclick()
+
+##############
+
+# from turtle import Turtle, Screen
+
+# sam=Turtle()
+# sam.shape("turtle")
+# sam.color("mediumaquamarine")
+
+# for _ in range(360):
+#     sam.forward(1)
+#     sam.left(1)
+    
+# window = Screen()
+
+# window.exitonclick()
+
+###############
+# from turtle import Turtle, Screen
+
+# sam=Turtle()
+# sam.shape("turtle") # turtle, square, triangle, circle, classic
+# sam.color("mediumaquamarine")
+# sam.speed("fastest") # slow, normal, fast, fastest
+
+# sam.penup()
+# sam.forward(100)
+# sam.pendown()
+# sam.pendown()
+# sam.pensize(5)
+# sam.forward(100)
+    
+# window = Screen()
+# window.exitonclick()
+
+#######################
+# from turtle import Turtle, Screen
+
+# sam=Turtle()
+# sam.shape("turtle") # turtle, square, triangle, circle, classic
+# sam.color("mediumaquamarine")
+
+# def draw_a_square():
+#     for _ in range(4):
+#         sam.forward(100)
+#         sam.left(90)
+
+# draw_a_square()
+    
+# window = Screen()
+# window.exitonclick()
+
+########################
+# from turtle import Turtle, Screen
+# import random
+
+# sam=Turtle()
+# window = Screen()
+
+# list_of_colors=["mediumaquamarine", "blue", "red", "yellow", "green", "orange", "purple", "pink"]
+# list_of_shapes=["turtle", "square", "triangle", "circle", "classic"]
+# list_of_speeds=["slow", "normal", "fast", "fastest"]
+# list_of_pen_sizes=[1, 2, 3, 4, 5]
+
+# sam.speed("slowest")
+
+
+# def draw_a_square():
+#     for _ in range(4):
+#         sam.color(random.choice(list_of_colors))
+#         sam.pensize(random.choice(list_of_pen_sizes))   
+#         sam.shape(random.choice(list_of_shapes))
+#         sam.forward(100)
+#         sam.left(90)
+
+# draw_a_square()
+    
+# window.exitonclick()
+
+######################
+# from turtle import Turtle, Screen
+# import random
+
+# window = Screen()
+# window.bgcolor("black")
+# window.setup(width=800, height=600)
+
+
+# list_of_colors=["mediumaquamarine", "blue", "red", "yellow", "green", "orange", "purple", "pink"]
+# list_of_shapes=["turtle", "square", "triangle", "circle", "classic"]
+# list_of_speeds=["slow", "normal", "fast", "fastest"]
+# list_of_pen_sizes=[1, 2, 3, 4, 5]
+
+# sam=Turtle()
+# sam.shape("turtle") # turtle, square, triangle, circle, classic
+# sam.color("white")
+# sam.pensize(5)
+# sam.speed("fast") # slow, normal, fast, fastest
+
+# tom=Turtle()
+# tom.shape("turtle")
+# tom.color("red")
+# tom.pensize(5)
+# tom.speed("fast")
+
+# my_angles=[0, 90, 180, 270]  #tuple immutable
+# my_distances=[50, 100, 150, 200]
+# loop_count=[5,10,15,20]
+
+
+# def draw_random(turtle_name):
+#     for _ in range(random.choice(loop_count)):
+#         turtle_name.forward(random.choice(my_distances))
+#         turtle_name.left(random.choice(my_angles))
+
+# draw_random(sam)
+# draw_random(tom)
+
+# window.exitonclick()
+
+######################
+# from turtle import Turtle, Screen
+
+# window = Screen()
+# window.bgcolor("black")
+# window.setup(width=1000, height=1000)
+
+# sam=Turtle()
+# sam.shape("turtle") # turtle, square, triangle, circle, classic
+# sam.color("white")
+# sam.pensize(5)
+# sam.speed("fast") # slow, normal, fast, fastest
+# def draw_circle():
+#     sam.penup() 
+#     sam.goto(-300,-300)  # Move to the starting position
+#     sam.pendown()
+#     for _ in range(10): # Draw 10 circles to complete a full rotation
+#         sam.circle(50)  # Draw a circle with radius 50
+#         sam.left(360/10)  # Turn left by 36 degrees
+
+# def draw_square():
+#     sam.penup()
+#     sam.goto(0, 0)  # Move to the starting position
+#     sam.pendown()
+#     for _ in range(10): # Draw 10 squares to complete a full rotation
+#         for _ in range(4):  # Draw a square
+#             sam.forward(80)  # Move forward by 80 units
+#             sam.left(90)  # Turn left by 90 degrees
+#         sam.left(360/10)  # Turn left by 36 degrees
+
+# def draw_triangle():
+#     sam.penup()
+#     sam.goto(300,300)  # Move to the starting position
+#     sam.pendown()
+#     for _ in range(10): # Draw 10 triangles to complete a full rotation
+#         for _ in range(3):  # Draw a triangle
+#             sam.forward(100)  # #ove forward by 100 units
+#             sam.left(120)  # Turn left by 120 degrees
+#         sam.left(360/10)  # Turn left by 36 degrees
+
+# draw_circle()
+# draw_square()
+# draw_triangle()
+
+# window.exitonclick()
+
+######################
+from turtle import Turtle, Screen
+window = Screen()
+
+sam=Turtle()
+user_name= window.textinput("User Name", "Please enter your name:")
+sam.hideturtle()
+sam.write(f"Hello, {user_name}!", align="center", font=("Arial", 20, "normal")) 
+
+
+window.exitonclick()
